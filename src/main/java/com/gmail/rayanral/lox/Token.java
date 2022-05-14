@@ -1,4 +1,4 @@
-package com.gmail.rayanral;
+package com.gmail.rayanral.lox;
 
 public class Token {
 

@@ -1,11 +1,11 @@
-package com.gmail.rayanral;
+package com.gmail.rayanral.lox;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.gmail.rayanral.TokenType.*;
+import static com.gmail.rayanral.lox.TokenType.*;
 
 public class Scanner {
 

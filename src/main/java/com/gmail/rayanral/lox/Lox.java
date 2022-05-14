@@ -1,4 +1,4 @@
-package com.gmail.rayanral;
+package com.gmail.rayanral.lox;
 
 import java.io.BufferedReader;
 import java.io.IOException;
