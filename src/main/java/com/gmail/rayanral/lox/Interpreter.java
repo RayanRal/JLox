@@ -24,11 +24,11 @@ public class Interpreter implements Expr.Visitor<Object> {
                 if (left instanceof Double && right instanceof Double) {
                     return (double)left + (double)right;
                 }
-                if (left instanceof String && right instanceof String) {
-                    return left + (String)right;
+                if (left instanceof String || right instanceof String) {
+                    return left.toString() + right.toString();
                 }
                 throw new RuntimeError(expr.operator,
-                        "Operands must be two numbers or two strings.");
+                        "Operands must be two numbers or one of them should be a String");
 
             case SLASH:
                 checkNumberOperands(expr.operator, left, right);
