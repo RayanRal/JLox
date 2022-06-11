@@ -14,6 +14,8 @@ public class GenerateAST {
             System.exit(64);
         }
         String outputDir = args[0];
+
+        // EXPRESSIONS
         defineAst(outputDir, "Expr", Arrays.asList(
                 "Assign   : Token name, Expr value",
                 "Binary   : Expr left, Token operator, Expr right",
@@ -25,15 +27,17 @@ public class GenerateAST {
                 "Variable : Token name"
         ));
 
+        // STATEMENTS
         defineAst(outputDir, "Stmt", Arrays.asList(
                 "Block      : List<Stmt> statements",
                 "Expression : Expr expression",
                 "Function   : Token name," +
-                            " List<Token> params, " +
+                            " List<Token> params," +
                             " List<Stmt> body",
                 "If         : Expr condition," +
                             " Stmt thenBranch, Stmt elseBranch",
                 "Print      : Expr expression",
+                "Return     : Token keyword, Expr value",
                 "Var        : Token name, Expr initializer",
                 "While      : Expr condition, Stmt body"
         ));
