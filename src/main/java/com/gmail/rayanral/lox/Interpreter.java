@@ -276,4 +276,8 @@ public class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
 
         return null;
     }
+
+    public void resolve(Expr expression, int i) {
+
+    }
 }
